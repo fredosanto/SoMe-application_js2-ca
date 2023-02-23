@@ -1,0 +1,53 @@
+@import "main";
+
+.profile-header {
+  max-width: $main-section-width;
+}
+
+.profile-picture {
+  @include contact-picture(250px, 250px);
+}
+
+.profile-name {
+  font-family: $header-font;
+  font-size: $header-font-size;
+}
+
+.profile-username {
+  font-family: $main-font;
+  font-size: $secondary-header-font-size;
+}
+
+///Section
+
+.profile-section {
+  max-width: $main-section-width;
+}
+
+.about,
+.contacts {
+  width: 467px;
+  background-color: blue;
+}
+
+.about h2,
+.contacts h2 {
+  font-size: $secondary-header-font-size;
+}
+
+.bi {
+  color: $secondary;
+  font-size: 25px;
+}
+
+.contacts-link {
+  color: $main-text-color;
+}
+
+.contact-btn {
+  max-height: 50px;
+}
+
+.contact {
+  border: $border;
+}

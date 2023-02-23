@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Righteous&family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- <link rel="stylesheet" href="/dist/css/main.css" /> -->
+    <link rel="stylesheet" href="/dist/css/index.css" />
+  </head>
+  <body class="body-bg">
+    <header class="bg-black">
+      <nav class="navbar navbar-expand-md p-4 w-100 m-0">
+        <div class="container-fluid d-flex justify-content-between">
+          <a
+            href="/dist/index.html"
+            class="logo navbar-brand text-uppercase text-decoration-none"
+            >Logo</a
+          >
+          <form role="search" class="search-field w-50">
+            <input
+              type="search"
+              class="form-control me-2 rounded-5 bg-light"
+              id="search-field"
+              placeholder="Search"
+            />
+          </form>
+          <div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse text-end"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    href="/dist/index.html"
+                    class="nav-link text-uppercase text-decoration-underline"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="/dist/profile.html" class="nav-link text-uppercase"
+                    >Profile</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="/dist/login.html" class="nav-link text-uppercase"
+                    >Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="text-center mt-5">
+      <div
+        class="section-nav d-flex m-auto justify-content-between align-items-center"
+      >
+        <div class="flex-">
+          <h1 class="">Home</h1>
+        </div>
+        <div>
+          <button class="btn btn-primary rounded-5">Add message</button>
+        </div>
+      </div>
+      <section class="profile-post-section bg-light mx-auto p-3 my-4 shadow-lg">
+        <h2 class="mx-auto my-3">Posts</h2>
+        <div
+          class="post-message d-flex justify-content-center align-items-center mx-auto py-5"
+        >
+          <img
+            class="contact-picture bg-secondary rounded-5"
+            src="/img/pexels-chris-f-6356881.jpg"
+            alt=""
+          />
+          <input
+            type="text"
+            name="post-message"
+            id="post-message"
+            placeholder="Add message"
+            class="post-input-message p-3 ms-3 rounded-5 border-0"
+          />
+        </div>
+        <div class="messages bg-light mx-auto my-5 p-3 shadow-lg">
+          <div class="d-flex flex-row contact-user mb-2">
+            <img
+              class="contact-picture bg-secondary rounded-5"
+              src="/img/pexels-oleksandr-pidvalnyi-321552.jpg"
+              alt=""
+            />
+            <div class="text-start m-2">
+              <p class="contact-name m-0">Champ Kind</p>
+              <p class="contact-username text-secondary m-0">
+                @SportcasterChamp
+              </p>
+            </div>
+          </div>
+          <p class="text-start">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+            numquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Fugit, dolore? Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Dolores officiis quae veritatis! Tempore molestiae voluptatum
+            expedita impedit ducimus ut rem maiores qui voluptatem quia nemo,
+            molestias repellendus, exercitationem reprehenderit cumque!
+          </p>
+          <div
+            class="d-flex message-nav justify-content-center align-items-center"
+          >
+            <button class="btn w-50 btn-primary rounded-5 m-3">Comment</button>
+            <button class="btn w-50 btn-info rounded-5 m-3">Like</button>
+          </div>
+        </div>
+        <div class="messages bg-light mx-auto my-5 p-3 shadow-lg">
+          <div class="d-flex flex-row contact-user mb-2">
+            <img
+              class="contact-picture bg-secondary rounded-5"
+              src="/img/pexels-katarzyna-modrzejewska-1314550.jpg"
+              alt=""
+            />
+            <div class="text-start m-2">
+              <p class="contact-name m-0">Ron Burgundy</p>
+              <p class="contact-username text-secondary m-0">
+                @RonTheAnchorman
+              </p>
+            </div>
+          </div>
+          <p class="text-start">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+            numquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Fugit, dolore?
+          </p>
+          <div
+            class="d-flex message-nav justify-content-center align-items-center"
+          >
+            <button class="btn w-50 btn-primary rounded-5 m-3">Comment</button>
+            <button class="btn w-50 btn-info rounded-5 m-3">Like</button>
+          </div>
+        </div>
+        <div class="messages bg-light mx-auto my-5 p-3 shadow-lg">
+          <div class="d-flex flex-row contact-user mb-2">
+            <img
+              class="contact-picture bg-secondary rounded-5"
+              src="/img/pexels-lumn-406014.jpg"
+              alt=""
+            />
+            <div class="text-start m-2">
+              <p class="contact-name m-0">Brian Fantana</p>
+              <p class="contact-username text-secondary m-0">
+                @brianAlsoAnchorman
+              </p>
+            </div>
+          </div>
+          <p class="text-start">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
+            numquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Fugit, dolore? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quos, repudiandae.
+          </p>
+          <div
+            class="d-flex message-nav justify-content-center align-items-center"
+          >
+            <button class="btn w-50 btn-primary rounded-5 m-3">Comment</button>
+            <button class="btn w-50 btn-info rounded-5 m-3">Like</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>
