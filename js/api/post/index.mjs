@@ -1,12 +1,16 @@
+"use strict";
 import { addPost } from "./addPost.mjs";
-export * from "./deletePost.mjs";
+import { updatePost } from "./updatePost.mjs";
+import { deletePost } from "./deletePost.mjs";
 export * from "./getPost.mjs";
-export * from "./updatePost.mjs";
+// export * from "./updatePost.mjs";
 
+////////// ADD POSTS //////////
 // addPost({
-//   title: "Fredo test",
-//   body: "Test without media and tags",
+//   title: "No title",
+//   body: "No content yet",
 // });
+//ids: 4215, 4179, 4220
 
 // addPost({
 //   title: "test post",
@@ -23,3 +27,15 @@ export * from "./updatePost.mjs";
 //tags: ["figure", "collectible"]
 //title: test post
 //updated: "2023-03-06T10:02:37.198Z"
+
+////////// UPDATE POSTS //////////
+// updatePost({
+//   id: 4221,
+//   title: "NEW! Updated title",
+//   body: "Content once again updated with PUT method",
+// });
+
+////////// DELETE POSTS //////////
+// deletePost({
+//   id: 4215,
+// });
