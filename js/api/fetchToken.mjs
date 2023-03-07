@@ -10,7 +10,7 @@ export function addHeaders() {
   };
 }
 
-export async function fetchToken(url, options) {
+export async function fetchToken(url, options = {}) {
   return fetch(url, {
     ...options,
     headers: addHeaders(),
