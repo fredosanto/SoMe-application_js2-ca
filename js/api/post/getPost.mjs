@@ -12,17 +12,7 @@ export async function getPosts() {
 
   const posts = await response.json();
   console.log(posts);
+  return posts;
 }
 
 // getPosts();
-
-export async function getSinglePost(postId) {
-  const postURL = `${SOCIAL_API_URL}${actionEndpoint}/${postId}`;
-
-  const response = await fetchToken(postURL);
-
-  const singlePost = await response.json();
-  console.log(singlePost);
-}
-
-getSinglePost(4183);

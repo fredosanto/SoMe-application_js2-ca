@@ -2,7 +2,9 @@
 import { addPost } from "./addPost.mjs";
 import { updatePost } from "./updatePost.mjs";
 import { deletePost } from "./deletePost.mjs";
-export * from "./getPost.mjs";
+import { getPosts } from "./getPost.mjs";
+import { getSinglePost } from "./getSinglePost.mjs";
+
 // export * from "./updatePost.mjs";
 
 ////////// ADD POSTS //////////
@@ -39,3 +41,8 @@ export * from "./getPost.mjs";
 // deletePost({
 //   id: 4215,
 // });
+
+////////// GET POST //////////
+// getPosts();
+
+// getSinglePost(4183);
