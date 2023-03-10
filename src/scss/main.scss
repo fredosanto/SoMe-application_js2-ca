@@ -44,6 +44,8 @@ body {
 
 .post-message {
   max-width: $message-max-width;
+  background-color: $body-bg;
+  border: $border;
 }
 
 .post-input-message {
@@ -68,3 +70,13 @@ body {
 .contact-username {
   font-size: $username-font-size;
 }
+
+// .post-media {
+//   height: 100px;
+//   display: block;
+// }
+
+// .media-content img {
+//   object-fit: contain;
+//   width: 10%;
+// }

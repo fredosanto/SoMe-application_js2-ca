@@ -45,4 +45,33 @@ import { getSinglePost } from "./getSinglePost.mjs";
 ////////// GET POST //////////
 // getPosts();
 
+async function submitPost(e) {
+  e.preventDefault();
+  const form = document.getElementById("add-post");
+  const title = form.postTitle.value;
+  const body = form.postMessage.value;
+  const makeTags = form.postTags.value;
+  const media = form.postMedia.value;
+  const tags = makeTags.split("#");
+
+  const postToAdd = {
+    title,
+    body,
+    tags,
+    media,
+  };
+  try {
+    await addPost(postToAdd);
+  } catch {}
+  location.reload("/index.html");
+}
+
+function init() {
+  const submitButton = document.querySelector("#submit-message");
+  submitButton.addEventListener("click", submitPost);
+}
+init();
+
+getPosts();
+
 // getSinglePost(4183);
