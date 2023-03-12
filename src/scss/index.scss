@@ -1,0 +1,19 @@
+@import "main";
+
+.add-content input {
+  background-color: #ffffff;
+}
+
+.add-content {
+  //   background-color: blue;
+}
+
+.picture-container {
+  width: 100px;
+  margin: auto;
+}
+
+.profile-picture {
+  width: 100%;
+  object-fit: contain;
+}

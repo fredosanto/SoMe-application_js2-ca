@@ -1,0 +1,82 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  font-family: $main-font;
+}
+
+.bi {
+  color: $nav-text-color;
+}
+
+.nav-link {
+  color: $primary;
+  font-family: $header-font;
+  font-size: $nav-link-font-size;
+
+  &:hover {
+    color: $nav-text-color;
+  }
+}
+
+.logo {
+  color: $primary;
+  font-family: $logo-font;
+  font-size: $logo-font-size;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.search-field {
+  max-width: 500px;
+}
+
+//Sections
+.section-nav {
+  max-width: $main-section-width;
+}
+
+.profile-post-section {
+  max-width: $main-section-width;
+}
+
+.post-message {
+  max-width: $message-max-width;
+  background-color: $body-bg;
+  border: $border;
+}
+
+.post-input-message {
+  background-color: $body-bg;
+  width: 90%;
+}
+
+.messages {
+  background-color: $body-bg;
+  border: $border;
+  max-width: $message-max-width;
+}
+
+.contact-picture {
+  @include contact-picture(50px, 50px);
+}
+
+.contact-name {
+  font-family: $header-font;
+}
+
+.contact-username {
+  font-size: $username-font-size;
+}
+
+// .post-media {
+//   height: 100px;
+//   display: block;
+// }
+
+// .media-content img {
+//   object-fit: contain;
+//   width: 10%;
+// }
