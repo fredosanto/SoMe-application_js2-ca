@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/dist/css/index.css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js" defer></script>
     <script src="/js/api/post/index.mjs" type="module" defer></script>
+    <!-- <script src="./js/htmlTemplates/posts.mjs" defer></script> -->
   </head>
   <body class="body-bg">
     <header class="bg-black">
@@ -64,13 +65,20 @@
           </div>
         </div>
       </nav>
-      <form role="search" class="search-field m-auto pb-3 w-50">
+      <form role="search" class="d-flex search-field m-auto pb-3 w-50">
         <input
           type="search"
           class="form-control me-2 rounded-5 bg-light"
-          id="search-field"
+          id="search-field-tags"
           placeholder="Search"
         />
+        <button
+          class="btn btn-primary m3 rounded-5"
+          id="search-button"
+          type="submit"
+        >
+          Search
+        </button>
       </form>
     </header>
     <main class="text-center mt-5">
@@ -78,112 +86,73 @@
         class="section-nav d-flex m-auto justify-content-between align-items-center"
       >
         <div class="flex-">
-          <h1 class="">Home</h1>
+          <h1 class="m-3">Home</h1>
         </div>
         <div>
-          <button class="btn btn-primary rounded-5">Add message</button>
+          <a href="/profile.html" class="btn btn-primary m3 rounded-5"
+            >Go to profile</a
+          >
         </div>
       </div>
       <section class="profile-post-section bg-light mx-auto p-3 my-4 shadow-lg">
+        <div class="post-message mx-auto p-5 py-5">
+          <div class="picture-container">
+            <img
+              class="profile-picture bg-secondary rounded-5"
+              src="/img/pexels-chris-f-6356881.jpg"
+              alt=""
+            />
+          </div>
+          <form class="add-content w-100" id="add-post">
+            <div class="form-group my-2">
+              <input
+                type="text"
+                name="postTitle"
+                id="postTitle"
+                placeholder="Add title"
+                class="post-input-message p-3 ms-3 rounded-5 border-0"
+              />
+            </div>
+            <div class="form-group my-2">
+              <input
+                type="text"
+                name="postMessage"
+                id="postMessage"
+                placeholder="Add message"
+                class="post-input-message p-3 ms-3 rounded-5 border-0"
+              />
+            </div>
+            <div class="form-group my-2">
+              <input
+                type="text"
+                name="postTags"
+                id="postTags"
+                placeholder="Tags (eg. #summer#food#cat#coffee)"
+                class="post-input-message p-3 ms-3 rounded-5 border-0"
+              />
+            </div>
+            <div class="form-group my-2">
+              <input
+                type="text"
+                name="postMedia"
+                id="postMedia"
+                placeholder="Media link (eg. https://url.com/image.jpg)"
+                class="post-input-message p-3 ms-3 rounded-5 border-0"
+              />
+            </div>
+            <button
+              type="submit"
+              id="submit-message"
+              class="btn btn-primary m-3 rounded-5"
+            >
+              Add new post
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="profile-post-section bg-light mx-auto p-3 my-4 shadow-lg">
         <h2 class="mx-auto my-3">Posts</h2>
-        <div
-          class="post-message d-flex justify-content-center align-items-center mx-auto py-5"
-        >
-          <img
-            class="contact-picture bg-secondary rounded-5"
-            src="/img/pexels-chris-f-6356881.jpg"
-            alt=""
-          />
-          <input
-            type="text"
-            name="post-message"
-            id="post-message"
-            placeholder="Add message"
-            class="post-input-message p-3 ms-3 rounded-5 border-0"
-          />
-        </div>
-        <div class="messages bg-light mx-auto my-5 p-3 shadow-lg">
-          <div class="d-flex flex-row contact-user mb-2">
-            <img
-              class="contact-picture bg-secondary rounded-5"
-              src="/img/pexels-oleksandr-pidvalnyi-321552.jpg"
-              alt=""
-            />
-            <div class="text-start m-2">
-              <p class="contact-name m-0">Champ Kind</p>
-              <p class="contact-username text-secondary m-0">
-                @SportcasterChamp
-              </p>
-            </div>
-          </div>
-          <p class="text-start">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
-            numquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Fugit, dolore? Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Dolores officiis quae veritatis! Tempore molestiae voluptatum
-            expedita impedit ducimus ut rem maiores qui voluptatem quia nemo,
-            molestias repellendus, exercitationem reprehenderit cumque!
-          </p>
-          <div
-            class="d-flex message-nav justify-content-center align-items-center"
-          >
-            <button class="btn w-50 btn-primary rounded-5 m-3">Comment</button>
-            <button class="btn w-50 btn-info rounded-5 m-3">Like</button>
-          </div>
-        </div>
-        <div class="messages bg-light mx-auto my-5 p-3 shadow-lg">
-          <div class="d-flex flex-row contact-user mb-2">
-            <img
-              class="contact-picture bg-secondary rounded-5"
-              src="/img/pexels-katarzyna-modrzejewska-1314550.jpg"
-              alt=""
-            />
-            <div class="text-start m-2">
-              <p class="contact-name m-0">Ron Burgundy</p>
-              <p class="contact-username text-secondary m-0">
-                @RonTheAnchorman
-              </p>
-            </div>
-          </div>
-          <p class="text-start">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
-            numquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Fugit, dolore?
-          </p>
-          <div
-            class="d-flex message-nav justify-content-center align-items-center"
-          >
-            <button class="btn w-50 btn-primary rounded-5 m-3">Comment</button>
-            <button class="btn w-50 btn-info rounded-5 m-3">Like</button>
-          </div>
-        </div>
-        <div class="messages bg-light mx-auto my-5 p-3 shadow-lg">
-          <div class="d-flex flex-row contact-user mb-2">
-            <img
-              class="contact-picture bg-secondary rounded-5"
-              src="/img/pexels-lumn-406014.jpg"
-              alt=""
-            />
-            <div class="text-start m-2">
-              <p class="contact-name m-0">Brian Fantana</p>
-              <p class="contact-username text-secondary m-0">
-                @brianAlsoAnchorman
-              </p>
-            </div>
-          </div>
-          <p class="text-start">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore,
-            numquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Fugit, dolore? Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Quos, repudiandae.
-          </p>
-          <div
-            class="d-flex message-nav justify-content-center align-items-center"
-          >
-            <button class="btn w-50 btn-primary rounded-5 m-3">Comment</button>
-            <button class="btn w-50 btn-info rounded-5 m-3">Like</button>
-          </div>
-        </div>
+        <div class="message_container"></div>
       </section>
     </main>
   </body>

@@ -4,15 +4,13 @@ import { updatePost } from "./updatePost.mjs";
 import { deletePost } from "./deletePost.mjs";
 import { getPosts } from "./getPost.mjs";
 import { getSinglePost } from "./getSinglePost.mjs";
+import { prefixHashtag } from "../../utils/prefixHashtag.mjs";
+import { tagSearch } from "../../eventHandlers/tagSearch.mjs";
+import { renderPostWall } from "../../profile/profilePostWall.mjs";
 
 // export * from "./updatePost.mjs";
 
 ////////// ADD POSTS //////////
-// addPost({
-//   title: "No title",
-//   body: "No content yet",
-// });
-//ids: 4215, 4179, 4220
 
 // addPost({
 //   title: "test post",
@@ -21,15 +19,36 @@ import { getSinglePost } from "./getSinglePost.mjs";
 //   media: "https://images.pexels.com/photos/7422160/pexels-photo-7422160.jpeg",
 // });
 
-//first post info (accepted)
-//body: "test"
-//created: "2023-03-06T10:02:37.198Z"
-//id: 4179
-//media: "https://images.pexels.com/photos/7422160/pexels-photo-7422160.jpeg"
-//tags: ["figure", "collectible"]
-//title: test post
-//updated: "2023-03-06T10:02:37.198Z"
+async function submitPost(e) {
+  e.preventDefault();
+  const form = document.getElementById("add-post");
+  const title = form.postTitle.value;
+  const body = form.postMessage.value;
+  const tags = prefixHashtag(form.postTags.value);
+  const media = form.postMedia.value;
 
+  const postToAdd = {
+    title,
+    body,
+    tags,
+    media,
+  };
+  try {
+    await addPost(postToAdd);
+  } catch {}
+  location.reload("/index.html");
+}
+
+function init() {
+  const submitButton = document.querySelector("#submit-message");
+  submitButton.addEventListener("click", submitPost);
+}
+init();
+
+const posts = await getPosts();
+posts.forEach((post) => renderPostWall(post, false, ".message_container"));
+
+tagSearch();
 ////////// UPDATE POSTS //////////
 // updatePost({
 //   id: 4221,

@@ -13,6 +13,6 @@ export async function deletePost(post) {
   });
 
   const results = await response.json();
-  console.log(results);
+  location.reload("/index.html");
   return results;
 }
