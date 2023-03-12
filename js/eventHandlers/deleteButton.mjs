@@ -1,6 +1,6 @@
 import { deletePost } from "../api/post/deletePost.mjs";
 
-export const hydrateButton = () => {
+export const deleteButton = () => {
   const deleteButtons = document.querySelectorAll("#delete-post");
   deleteButtons.forEach((button) => {
     const name = button.name;

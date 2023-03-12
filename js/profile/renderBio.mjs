@@ -1,7 +1,7 @@
-import { profile } from "../profile/getProfileName.mjs";
+import { profile } from "./getProfileName.mjs";
 import { SOCIAL_API_URL } from "../api/apiVariables.mjs";
 import { fetchToken } from "../api/fetchToken.mjs";
-import { profileTemplate } from "../htmlTemplates/profileTemplate.mjs";
+import { bioTemplate } from "../htmlTemplates/bioTemplate.mjs";
 
 const user = profile("profile");
 
@@ -13,7 +13,7 @@ export async function getProfile() {
   const response = await fetchToken(profileURL);
   const profile = await response.json();
 
-  profileTemplate(profile);
+  bioTemplate(profile);
 
   return profile;
 }

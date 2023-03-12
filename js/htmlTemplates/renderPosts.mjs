@@ -2,7 +2,6 @@
 
 export function renderPostWall(post, isPrivate, parentId) {
   const postWall = document.querySelector(parentId);
-  // const postWall = document.querySelector(".profile_posts");
   let element = document.createElement("div");
   element.classList.add(
     "messages",

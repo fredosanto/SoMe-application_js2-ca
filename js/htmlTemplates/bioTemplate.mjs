@@ -1,4 +1,4 @@
-export function profileTemplate(profile) {
+export function bioTemplate(profile) {
   const profileHeader = document.querySelector(".profile-bio");
   let bio = document.createElement("div");
   bio.classList.add(
