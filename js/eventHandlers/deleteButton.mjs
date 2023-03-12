@@ -5,7 +5,6 @@ export const deleteButton = () => {
   deleteButtons.forEach((button) => {
     const name = button.name;
     button.addEventListener("click", async () => {
-      // console.log("i was clicked");
       deletePost({ id: name });
     });
   });

@@ -36,9 +36,11 @@ export function renderPostWall(post, isPrivate, parentId) {
                   </p>
                 </div>
               </div>
-              <h3 class="text-start">
-                ${post.title}
-                </h3>
+              <div class="text-start">
+              <a href="post.html?id=${post.id}" class="d-inline-block"><h3>
+              ${post.title}
+              </h3></a>
+              </div>
                 <p class="text-start">
                   ${post.body}
                 </p>
