@@ -37,3 +37,6 @@ Commands to run application:
 ```bash
 npm run watch
 ```
+
+Project:
+https://trello.com/invite/b/RyGj4P1w/ATTI911bc1edc38f1658e6f25aa81e45211b0C435634/somejs2-ca
