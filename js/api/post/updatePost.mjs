@@ -14,6 +14,5 @@ export async function updatePost(post) {
   });
 
   const results = await response.json();
-  console.log(results);
   return results;
 }

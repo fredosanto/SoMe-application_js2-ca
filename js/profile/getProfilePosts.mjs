@@ -1,9 +1,9 @@
 "use strict";
 
-import { renderPostWall } from "../profile/profilePostWall.mjs";
 import { SOCIAL_API_URL } from "../api/apiVariables.mjs";
 import { fetchToken } from "../api/fetchToken.mjs";
-import { hydrateButton } from "../eventHandlers/deleteButton.mjs";
+import { renderPostWall } from "../htmlTemplates/renderPosts.mjs";
+import { deleteButton } from "../eventHandlers/deleteButton.mjs";
 import { profile } from "./getProfileName.mjs";
 
 const myProfile = profile("profile");
@@ -17,13 +17,9 @@ export async function getPosts() {
 
   const response = await fetchToken(postsURL);
   const posts = await response.json();
-  console.log(posts);
-  // renderPostWall(posts);
   posts.forEach((post) => renderPostWall(post, true, ".profile_posts"));
-  console.log(posts);
 
-  // hydrate buttons
-  hydrateButton();
+  deleteButton();
 
   return posts;
 }

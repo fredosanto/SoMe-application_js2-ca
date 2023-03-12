@@ -6,12 +6,11 @@ import { fetchToken } from "../fetchToken.mjs";
 const actionEndpoint = "/posts";
 
 export async function getSinglePost(postId) {
-  const postURL = `${SOCIAL_API_URL}${actionEndpoint}/${postId}`;
+  const postURL = `${SOCIAL_API_URL}${actionEndpoint}/${postId}?_author=true`;
 
   const response = await fetchToken(postURL);
 
   const singlePost = await response.json();
-  console.log(singlePost);
   return singlePost;
 }
 

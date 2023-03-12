@@ -1,7 +1,6 @@
 "use strict";
 import { getSinglePost } from "../api/post/getSinglePost.mjs";
 import { updatePost } from "../api/post/updatePost.mjs";
-import { getPosts } from "../profile/getProfilePosts.mjs";
 
 export async function updateHandler() {
   const updateForm = document.getElementById("update-post");
@@ -26,6 +25,7 @@ export async function updateHandler() {
     post.id = id;
 
     updatePost(post);
+    alert("Post is updated");
+    window.location.href = `/profile.html`;
   });
 }
-updateHandler();
