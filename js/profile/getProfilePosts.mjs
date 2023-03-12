@@ -17,9 +17,10 @@ export async function getPosts() {
 
   const response = await fetchToken(postsURL);
   const posts = await response.json();
-
+  console.log(posts);
   // renderPostWall(posts);
-  posts.forEach((post) => renderPostWall(post));
+  posts.forEach((post) => renderPostWall(post, true, ".profile_posts"));
+  console.log(posts);
 
   // hydrate buttons
   hydrateButton();

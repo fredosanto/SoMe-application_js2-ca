@@ -1,7 +1,8 @@
 "use strict";
 
-export function renderPostWall(post) {
-  const postWall = document.querySelector(".profile_posts");
+export function renderPostWall(post, isPrivate, parentId) {
+  const postWall = document.querySelector(parentId);
+  // const postWall = document.querySelector(".profile_posts");
   let element = document.createElement("div");
   element.classList.add(
     "messages",
@@ -12,6 +13,16 @@ export function renderPostWall(post) {
     "shadow-lg"
   );
 
+  const editbutton = `<a href="edit.html?id=${post.id}" class="btn w-50 btn-primary rounded-5 m-3">Edit</a>`;
+  const deleteButton = `<button id="delete-post" name="${post.id}" class="btn w-50 btn-danger rounded-5 m-3">Delete</button>`;
+  const commentButton =
+    '<button class="btn w-50 btn-primary rounded-5 m-3">Comment</button>';
+  const likeButton =
+    '<button class="btn w-50 btn-info rounded-5 m-3">Like</button>';
+
+  const buttons = isPrivate
+    ? editbutton + deleteButton
+    : commentButton + likeButton;
   element.innerHTML = `
               <div class="d-flex flex-row contact-user mb-2">
                 <img
@@ -33,7 +44,7 @@ export function renderPostWall(post) {
                   ${post.body}
                 </p>
                 <p class="text-start text-secondary">
-                Tags: ${post.tags}
+                Tags: ${post.tags.join(" ")}
                 </p>
               <div class="post-media">
               <img
@@ -45,10 +56,7 @@ export function renderPostWall(post) {
               <div
                 class="d-flex message-nav justify-content-center align-items-center"
               >
-                <button class="btn w-50 btn-primary rounded-5 m-3">Edit</button>
-                <button id="delete-post" name="${
-                  post.id
-                }" class="btn w-50 btn-danger rounded-5 m-3">Delete</button>
+                ${buttons}
               </div>
     `;
 
